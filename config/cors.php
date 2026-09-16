@@ -9,8 +9,7 @@ return [
         'http://localhost:5173',  // React frontend (dev)
         'http://localhost:5174',  // React frontend (fallback)
         'http://localhost:3001',  // React frontend (alt)
-        'https://app.grserviciotecnico.com',
-
+        'https://app.grserviciotecnico.com', // Produccion
     ],
 
     'allowed_origins_patterns' => [],
