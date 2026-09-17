@@ -74,6 +74,10 @@ class InvoiceService
         $fullPath = $this->pdfService->getFullPath($invoice->pdf_path);
         $success  = $this->whatsAppService->sendInvoice($invoice, $fullPath);
 
+        if ($success) {
+            $invoice->update(['status' => 'sent']);
+        }
+
         return [
             'success' => $success,
             'invoice' => $invoice->fresh(['client', 'logs']),
