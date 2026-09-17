@@ -463,14 +463,7 @@
     </div>
 
     {{-- SIGNATURE --}}
-    <div class="signature-section">
-        <div class="signature-box">
-            <div class="signature-line" style="width: 180px; margin: 0 auto 6px;"></div>
-            <div class="signature-label">Firma del Técnico</div>
-            @if($settings?->company_name)
-            <div style="font-size: 9px; color: #94a3b8; margin-top: 2px;">{{ $settings->company_name }}</div>
-            @endif
-        </div>
+    <div class="signature-section" style="justify-content: flex-end;">
         <div style="text-align: right; font-size: 9px; color: #94a3b8;">
             <div>Documento generado el</div>
             <div style="font-weight: 600; color: #64748b;">{{ now()->format('d/m/Y H:i') }}</div>
