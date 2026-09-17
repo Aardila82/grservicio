@@ -17,7 +17,8 @@ class UpdateInvoiceRequest extends FormRequest
             'is_paid'        => ['sometimes', 'boolean'],
             'pending_amount' => ['nullable', 'numeric', 'min:0'],
             'notes'          => ['sometimes', 'nullable', 'string'],
-            'invoice_date' => ['sometimes', 'date'],
+            'invoice_date'   => ['sometimes', 'date'],
+            'status'         => ['sometimes', 'string', 'in:pending,sent,error'],
         ];
     }
 }
